@@ -8,4 +8,4 @@ end
 
 
 Chef::Log.info("Stopping Delayed::Jobs")
-sudo "monit -g delayed_job_blog stop all"
+sudo "monit -g delayed_job_blog stop"
