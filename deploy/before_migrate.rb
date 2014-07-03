@@ -5,3 +5,7 @@ execute "rake assets:precompile" do
   command "bundle exec rake assets:precompile"
   environment "RAILS_ENV" => rails_env
 end
+
+
+Chef::Log.info("Stopping Delayed::Jobs")
+sudo "monit -g delayed_job_blog stop all"
